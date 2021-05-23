@@ -1,5 +1,8 @@
 package test;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+
 import connection.OracleConnection;
 import domain.StockException;
 
@@ -11,9 +14,10 @@ public class TestConncetion
 		try {
 			OracleConnection oracleConnection = new OracleConnection();
 			oracleConnection.open();
-			
+			Connection con = oracleConnection.getConnection();
+			System.out.println(con.getMetaData().getDatabaseMajorVersion());
 			oracleConnection.close();
-		} catch (StockException e) {
+		} catch (StockException | SQLException e) {
 			System.err.println(e.getMessage());
 		}
 	}
