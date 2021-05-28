@@ -1,0 +1,10 @@
+INSERT INTO CUSTOMER (customer_id , credits) VALUES (11000, -1);
+INSERT INTO CUSTOMER (customer_id , credits) VALUES (11001, 0);
+--DELETE FROM customer where customer_id = 11001;
+INSERT INTO CUSTOMER (customer_id , birthday) VALUES (11002, SYSDATE);
+INSERT INTO CUSTOMER (customer_id , birthday) VALUES (11003, TO_DATE('20-05-2020' , 'DD-MM-YYYY'));
+--DELETE FROM customer where customer_id = 11003;
+INSERT INTO CUSTOMER (customer_id , email) VALUES (11004, 'ross_rieger gmail.com');
+INSERT INTO CUSTOMER (customer_id , email) VALUES (11004, 'ross_rieger@gmail.com');
+--DELETE FROM customer where customer_id = 11004;
+SELECT * FROM customer WHERE customer_id >= 11000;
